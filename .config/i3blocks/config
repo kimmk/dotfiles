@@ -1,0 +1,55 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+#[mail]
+#label=📬
+#command=i3mail
+#interval=180
+#signal=12
+
+[volume]
+interval=once
+command=i3volume
+signal=10
+
+[iface]
+label=🌐
+instance=eno1
+interval=10
+
+#[battery]
+#command=i3battery
+#interval=5
+
+[time]
+label=📅
+command=echo $(date '+%d-%m-%Y %H:%M') 🕓
+interval=1
+
+#[wifi]
+#command=i3wifi
+#instance=wlp2s0
+#interval=10
