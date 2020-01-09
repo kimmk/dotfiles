@@ -21,5 +21,3 @@ alias esptool=/home/kimmo/software/esp-idf/components/esptool_py/esptool/esptool
 # Enable vi-mode
 bindkey -v
 bindkey '^R' history-incremental-search-backward
-
-alias buildapp="/home/kimmo/nextfour/projects/marine4/src/tools/env/buildapp.sh"
