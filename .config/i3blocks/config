@@ -35,11 +35,6 @@ interval=once
 command=i3volume
 signal=10
 
-[iface]
-label=🌐
-instance=eno1
-interval=10
-
 #[battery]
 #command=i3battery
 #interval=5

@@ -134,8 +134,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 bindsym $mod+Tab workspace back_and_forth
-bindsym Mod1+Tab workspace next
-bindsym Mod1+Shift+Tab workspace prev
+bindsym Mod1+Tab workspace back_and_forth 
+#bindsym Mod1+Shift+Tab workspace prev
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -143,8 +143,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-# suspend system
-bindsym $mod+Shift+b exec "systemctl suspend"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -210,5 +208,31 @@ bar {
     position top
     mode dock 
 }
+
+# Additional custom shortcuts
+bindsym $mod+Shift+ö exec i3lock
+
+# Power management menu
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+     bindsym l exec --no-startup-id i3lock
+     bindsym e exec --no-startup-id i3exit logout, mode "default"
+     bindsym s exec --no-startup-id systemctl suspend
+     bindsym h exec --no-startup-id systemctl hibernate
+     bindsym r exec --no-startup-id systemctl reboot
+     bindsym Shift+s exec --no-startup-id systemctl shutdown
+
+     # back to normal: Enter or Escape
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode "$mode_system"
+
+# MS Teams floating notifications
+for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
+for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable
+# Float gitk windows
+for_window [class="gitk"] floating enable
+for_window [class="Gitk"] floating enable
 
 exec dex -ae i3
