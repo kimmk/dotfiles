@@ -68,7 +68,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+#bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -186,7 +186,7 @@ set $transparent		#00000000
 
 #						BORDER			BACKGROUND	TEXT		INDICATOR   	CHILD_BORDER
 client.focused			$blue			$blue       $magenta	$darkmagenta	$darkblue
-client.unfocuse			$transparent	$blue		$white		$darkblue		$darkblack
+client.unfocused		$transparent	$blue		$white		$darkblue		$darkblack
 client.focused_inactive	$transparent	$blue		$white		$darkblue		$darkblack
 client.urgent			$darkred		$darkred	$black		$darkred		$darkred
 client.background $black
@@ -210,7 +210,7 @@ bar {
 }
 
 # Additional custom shortcuts
-bindsym $mod+Shift+ö exec i3lock
+#bindsym $mod+Shift+ö exec i3lock
 
 # Power management menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
