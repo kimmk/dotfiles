@@ -212,6 +212,11 @@ bar {
 # Additional custom shortcuts
 #bindsym $mod+Shift+ö exec i3lock
 
+# Media volume controls
+bindsym XF86AudioMute exec amixer sset 'Master' toggle
+bindsym XF86AudioLowerVolume exec amixer sset 'Master' 2%-
+bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 2%+
+
 # Power management menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
