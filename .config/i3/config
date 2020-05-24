@@ -241,4 +241,7 @@ for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Previe
 for_window [class="gitk"] floating enable
 for_window [class="Gitk"] floating enable
 
+# Disable X11 screensaver
+exec xset s off
+
 exec dex -ae i3
