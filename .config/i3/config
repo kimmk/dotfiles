@@ -248,4 +248,11 @@ for_window [class="Gitk"] floating enable
 # Disable X11 screensaver
 exec xset s off
 
+# Autostart applications
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id nm-applet
+exec --no-startup-id clipit
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id volumeicon
+
 exec dex -ae i3
