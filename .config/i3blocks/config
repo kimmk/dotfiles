@@ -31,6 +31,7 @@ command=i3-volume
 signal=10
 
 [battery]
+label=🔋
 command=acpi -b | grep -Eo '[0-9]{1,}%'
 interval=10
 
