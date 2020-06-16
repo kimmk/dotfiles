@@ -220,7 +220,7 @@ bindsym XF86AudioLowerVolume exec amixer sset 'Master' 2%-
 bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 2%+
 
 # Power management menu
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
      bindsym l mode "default", exec --no-startup-id i3lock
      bindsym Shift+e mode "default", exec --no-startup-id i3exit logout
