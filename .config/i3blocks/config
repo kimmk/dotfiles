@@ -36,7 +36,7 @@ command=acpi -b | grep -Eo '[0-9]{1,}%'
 interval=10
 
 [time]
-command=echo $(date '+%d-%m-%Y %H:%M')
+command=echo $(date '+%d-%m-%Y %H:%M ')
 interval=1
 
 #[wifi]
