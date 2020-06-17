@@ -21,14 +21,9 @@
 # urgent
 
 command=/usr/lib/i3blocks/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=25
 separator="|"
 markup=pango
-
-[volume]
-interval=once
-command=i3-volume
-signal=10
 
 [battery]
 label=🔋
@@ -39,7 +34,3 @@ interval=10
 command=echo $(date '+%d-%m-%Y %H:%M ')
 interval=1
 
-#[wifi]
-#command=i3wifi
-#instance=wlp2s0
-#interval=10
