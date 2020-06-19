@@ -4,7 +4,7 @@ ZSH_THEME="kardan"
 
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git zsh-syntax-highlighting history-substring-search)
+plugins=(git zsh-syntax-highlighting history-substring-search ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
