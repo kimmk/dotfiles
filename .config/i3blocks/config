@@ -20,7 +20,7 @@
 # signal
 # urgent
 
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=~/.local/bin/blocks/$BLOCK_NAME
 separator_block_width=25
 separator="|"
 markup=pango
