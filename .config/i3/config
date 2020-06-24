@@ -30,7 +30,7 @@ font pango:monospace 10
 floating_modifier $mod
 
 # terminal
-set $app-terminal gnome-terminal
+set $app-terminal st
 bindsym $mod+t exec $app-terminal
 bindsym $mod+Return exec $app-terminal
 
