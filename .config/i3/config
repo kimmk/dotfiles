@@ -89,7 +89,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# move container to another monitor
+# moving workspaces between monitors
 bindsym $mod+m move workspace to output left
 bindsym $mod+Shift+m move workspace to output right
 
@@ -106,7 +106,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# switch to workspace
+# switching workspaces
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -193,15 +193,16 @@ bar {
     mode dock 
 }
 
-# Additional custom shortcuts
-#bindsym $mod+Shift+ö exec i3lock
-
-# Media volume controls
+# media volume controls
 bindsym XF86AudioMute exec amixer sset 'Master' toggle
 bindsym XF86AudioLowerVolume exec amixer sset 'Master' 2%-
 bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 2%+
 
-# Power management menu
+# screenshots with scrot
+bindsym Print exec scrot -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
+bindsym $mod+Print exec scrot -s -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
+
+# power management menu
 set $mode_system System (l) lock, (Shift+e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
      bindsym l mode "default", exec --no-startup-id i3lock
