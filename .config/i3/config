@@ -196,8 +196,8 @@ bindsym XF86AudioLowerVolume exec amixer sset 'Master' 2%-
 bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 2%+
 
 # screenshots with scrot
-bindsym Print exec scrot -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
-bindsym --release $mod+Print exec scrot -s -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
+bindsym $mod+Print exec scrot -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
+bindsym --release Print exec scrot -s -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
 
 # power/login management
 set $mode_system (l) lock screen, (shift+e) logout, (s) suspend, (h) hibernate, (shift+r) reboot, (shift+s) shutdown
