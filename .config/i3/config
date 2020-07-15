@@ -199,6 +199,9 @@ bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 2%+
 bindsym $mod+Print exec scrot -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
 bindsym --release Print exec scrot -s -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
 
+# color picker
+bindsym --release $mod+b exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xclip -selection clipboard
+
 # power/login management
 set $mode_system (l) lock screen, (shift+e) logout, (s) suspend, (h) hibernate, (shift+r) reboot, (shift+s) shutdown
 mode "$mode_system" {
