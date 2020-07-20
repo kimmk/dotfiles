@@ -205,7 +205,7 @@ bindsym --release $mod+b exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xcl
 # power/login management
 set $mode_system (l) lock screen, (shift+e) logout, (s) suspend, (h) hibernate, (shift+r) reboot, (shift+s) shutdown
 mode "$mode_system" {
-     bindsym l mode "default", exec --no-startup-id i3lock
+     bindsym l mode "default", exec --no-startup-id i3lock -c000000
      bindsym Shift+e mode "default", exec --no-startup-id i3exit logout
      bindsym s mode "default", exec --no-startup-id systemctl suspend
      bindsym h mode "default", exec --no-startup-id systemctl hibernate
