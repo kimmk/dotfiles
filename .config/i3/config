@@ -165,6 +165,7 @@ bar {
 
     font pango:monospace 10
     status_command i3blocks
+    workspace_min_width 40
     position top
     mode dock 
 }
