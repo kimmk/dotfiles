@@ -182,8 +182,13 @@ bindsym --release Print exec scrot -s -m /tmp/printscreen.png -e 'xclip -selecti
 # color picker
 bindsym --release $mod+b exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xclip -selection clipboard
 
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
 # power/login management
 set $mode_system (l) lock screen, (shift+e) logout, (s) suspend, (h) hibernate, (shift+r) reboot, (shift+s) shutdown
+
 mode "$mode_system" {
      bindsym l mode "default", exec --no-startup-id i3lock -c000000
      bindsym Shift+e mode "default", exec --no-startup-id i3exit logout
