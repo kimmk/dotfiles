@@ -18,6 +18,9 @@ export PATH=$PATH:/home/kimmo/software/xtensa-esp32-elf/bin
 export IDF_PATH=/home/kimmo/software/esp-idf
 alias esptool=/home/kimmo/software/esp-idf/components/esptool_py/esptool/esptool.py
 
+# Random aliases
+alias i3sw=i3-swallow
+
 # Enable vi-mode
 bindkey -v
 bindkey '^R' history-incremental-search-backward
