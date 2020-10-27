@@ -222,5 +222,6 @@ exec --no-startup-id clipit
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id volumeicon
 exec --no-startup-id dockd --daemon
+exec --no-startup-id feh --bg-fill ~/syncthing/camera/bg.jpg
 
 exec dex -ae i3
