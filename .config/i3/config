@@ -51,7 +51,7 @@ bindsym $mod+c split horizontal
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+Shift+w layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 workspace_layout tabbed
@@ -185,6 +185,10 @@ bindsym --release $mod+b exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xcl
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+# scratchpad
+bindsym $mod+s move scratchpad
+bindsym $mod+Shift+s scratchpad show
 
 # power/login management
 set $mode_system (l) lock screen, (shift+e) logout, (s) suspend, (h) hibernate, (shift+r) reboot, (shift+s) shutdown
