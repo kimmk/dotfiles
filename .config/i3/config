@@ -69,8 +69,8 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
 # moving workspaces between monitors
-bindsym $mod+m move workspace to output left
-bindsym $mod+Shift+m move workspace to output right
+bindsym $mod+m move workspace to output right
+bindsym $mod+Shift+m move workspace to output left
 
 # workspace names
 set $ws1 "1"
