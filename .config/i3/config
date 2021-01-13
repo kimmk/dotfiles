@@ -9,7 +9,7 @@ font pango:Dejavu Sans Mono 10
 floating_modifier $mod
 
 # terminal
-set $app-terminal urxvt
+set $app-terminal alacritty
 bindsym $mod+t exec $app-terminal
 bindsym $mod+Return exec $app-terminal
 
