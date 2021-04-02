@@ -174,7 +174,8 @@ bar {
     status_command i3blocks
     workspace_min_width 40
     position top
-    mode dock 
+    mode dock
+    tray_output primary
 }
 
 # media volume controls
