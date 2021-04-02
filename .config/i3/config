@@ -5,6 +5,9 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:Dejavu Sans Mono 10
 
+# Hide window borders when on edge of display
+hide_edge_borders both
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
