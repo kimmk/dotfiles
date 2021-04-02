@@ -16,6 +16,10 @@ set $app-terminal alacritty
 bindsym $mod+t exec $app-terminal
 bindsym $mod+Return exec $app-terminal
 
+# GUI file manager
+set $app-fileman thunar
+bindsym $mod+g exec $app-fileman
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
