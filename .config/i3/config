@@ -181,11 +181,6 @@ bar {
     tray_output primary
 }
 
-# media volume controls
-bindsym XF86AudioMute exec amixer sset 'Master' toggle
-bindsym XF86AudioLowerVolume exec amixer sset 'Master' 2%-
-bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 2%+
-
 # screenshots with scrot
 bindsym $mod+Print exec scrot -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
 bindsym --release Print exec scrot -s -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
