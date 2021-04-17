@@ -181,9 +181,8 @@ bar {
     tray_output primary
 }
 
-# screenshots with scrot
-bindsym $mod+Print exec scrot -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
-bindsym --release Print exec scrot -s -m /tmp/printscreen.png -e 'xclip -selection clipboard -target image/png -i $f'
+# screenshots with flameshot
+bindsym Print exec flameshot gui
 
 # color picker
 bindsym --release $mod+b exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xclip -selection clipboard
