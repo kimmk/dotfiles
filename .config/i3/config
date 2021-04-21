@@ -185,7 +185,7 @@ bar {
 bindsym Print exec flameshot gui
 
 # color picker
-bindsym --release $mod+b exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xclip -selection clipboard
+bindsym --release $mod+p exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xclip -selection clipboard
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
