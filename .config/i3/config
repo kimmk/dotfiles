@@ -195,6 +195,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym $mod+s move scratchpad
 bindsym $mod+Shift+s scratchpad show
 
+# toggle redshift
+bindsym $mod+F9 exec pkill -USR1 redshift
+
 # power/login management
 set $mode_system (l) lock screen, (shift+e) logout, (s) suspend, (h) hibernate, (shift+r) reboot, (shift+s) shutdown
 
@@ -239,5 +242,6 @@ exec --no-startup-id clipit
 exec --no-startup-id pasystray
 exec xset s off
 exec xset -dpms
+exec redshift -l 60.27:22.16 -t 4000:1800
 
 exec dex -ae i3
