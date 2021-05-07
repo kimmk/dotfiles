@@ -193,7 +193,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # scratchpad
 bindsym $mod+s move scratchpad
-bindsym $mod+Shift+s scratchpad show
+bindsym $mod+b scratchpad show
 
 # toggle redshift
 bindsym $mod+F9 exec pkill -USR1 redshift
