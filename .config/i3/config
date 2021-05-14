@@ -242,6 +242,6 @@ exec --no-startup-id clipit
 exec --no-startup-id pasystray
 exec xset s off
 exec xset -dpms
-exec redshift -l 60.27:22.16 -t 4000:1800 -b 1.0:0.8
+exec redshift -l 60.27:22.16 -t 6000:3000 -b 1.0:0.8
 
 exec dex -ae i3
