@@ -14,6 +14,7 @@ floating_modifier $mod
 # terminal
 set $app-terminal alacritty
 bindsym $mod+Return exec $app-terminal
+bindsym $mod+Shift+Return exec $app-terminal -e tmux
 
 # GUI file manager
 set $app-fileman thunar
