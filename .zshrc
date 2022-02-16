@@ -23,5 +23,6 @@ alias esptool=/home/kimmo/software/esp-idf/components/esptool_py/esptool/esptool
 alias i3sw=i3-swallow
 
 # Enable vi-mode
-bindkey -v
+#bindkey -v
+
 bindkey '^R' history-incremental-search-backward
