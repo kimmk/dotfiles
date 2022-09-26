@@ -13,11 +13,11 @@ unsetopt share_history
 export EDITOR=nvim
 
 # Paths
-export PATH=$PATH:/home/kimmo/.cargo/bin
-export PATH=$PATH:/home/kimmo/software/gopath/bin
-export PATH=$PATH:/home/kimmo/software/xtensa-esp32-elf/bin
-export IDF_PATH=/home/kimmo/software/esp-idf
-alias esptool=/home/kimmo/software/esp-idf/components/esptool_py/esptool/esptool.py
+export PATH=$PATH:${HOME}/.cargo/bin
+export PATH=$PATH:${HOME}/software/gopath/bin
+export PATH=$PATH:${HOME}/software/xtensa-esp32-elf/bin
+export IDF_PATH=${HOME}/software/esp-idf
+alias esptool=${HOME}/software/esp-idf/components/esptool_py/esptool/esptool.py
 
 # Random aliases
 alias i3sw=i3-swallow
