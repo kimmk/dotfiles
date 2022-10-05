@@ -203,7 +203,7 @@ set $mode_system (l) lock screen, (shift+e) logout, (s) suspend, (h) hibernate, 
 
 mode "$mode_system" {
      bindsym l mode "default", exec --no-startup-id i3lock -c000000
-     bindsym Shift+e mode "default", exec --no-startup-id i3exit logout
+     bindsym Shift+e mode "default", exec --no-startup-id i3-msg exit
      bindsym s mode "default", exec --no-startup-id systemctl suspend
      bindsym h mode "default", exec --no-startup-id systemctl hibernate
      bindsym Shift+r exec --no-startup-id systemctl reboot
