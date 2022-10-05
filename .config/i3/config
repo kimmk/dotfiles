@@ -66,7 +66,6 @@ bindsym $mod+e layout toggle split
 workspace_layout tabbed
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
 bindsym $mod+x floating toggle
 bindsym Shift+button2 floating toggle
 
