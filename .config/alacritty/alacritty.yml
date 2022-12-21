@@ -2,9 +2,25 @@ env:
   TERM: xterm-256color
 
 font:
-  size: 11
+  normal:
+    family: Dejavu Sans Mono Nerd Font
+    style: Regular
+
+  bold:
+    family: DejaVu Sans Mono Nerd Font
+    style: Bold
+
+  italic:
+    family: DejaVu Sans Mono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: DejaVu Sans Mono Nerd Font
+    style: Bold Italic
+
+  size: 12
   offset:
-      x: -1
+    x: -1
 
 colors:
   bright:
