@@ -232,16 +232,14 @@ for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Previe
 for_window [class="gitk"] floating enable
 for_window [class="Gitk"] floating enable
 
-# disable X11 screensaver
-exec xset s off
+# run X specific settings
+exec sh ~/.config/xsettings
 
 # autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id clipit
 exec --no-startup-id pasystray
-exec xset s off
-exec xset -dpms
 exec redshift -l 60.27:22.16 -t 6000:3000 -b 1.0:0.8
 
 exec dex -ae i3
