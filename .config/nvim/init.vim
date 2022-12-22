@@ -8,16 +8,14 @@ set shiftwidth=4
 set expandtab
 set smartindent
 
-noremap <A-c> :vsp<cr>
-noremap <A-v> :sp<cr>
-noremap <A-j> <C-W><C-J>
-noremap <A-k> <C-W><C-K>
-noremap <A-l> <C-W><C-L>
-noremap <A-h> <C-W><C-H>
-noremap <S-A-h> <C-W><
-noremap <S-A-l> <C-W>>
-noremap <S-A-j> <C-W>-
-noremap <S-A-k> <C-W>+
+noremap <C-j> <C-W><C-J>
+noremap <C-k> <C-W><C-K>
+noremap <C-l> <C-W><C-L>
+noremap <C-h> <C-W><C-H>
+noremap <A-h> <C-W><
+noremap <A-l> <C-W>>
+noremap <A-j> <C-W>-
+noremap <A-k> <C-W>+
 noremap <A-e> :NvimTreeFindFileToggle<cr>
 noremap <A-f> <cmd>Telescope find_files<cr>
 noremap <A-g> <cmd>Telescope live_grep<cr>
