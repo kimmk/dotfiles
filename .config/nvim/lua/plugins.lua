@@ -13,6 +13,7 @@ use 'willthbill/opener.nvim'
 use 'ryanoasis/vim-devicons'
 use 'ntpeters/vim-better-whitespace'
 use 'github/copilot.vim'
+use { "catppuccin/nvim", as = "catppuccin" }
 
 end)
 

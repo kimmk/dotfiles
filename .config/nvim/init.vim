@@ -8,6 +8,8 @@ set shiftwidth=4
 set expandtab
 set smartindent
 
+colorscheme catppuccin
+
 noremap <C-j> <C-W><C-J>
 noremap <C-k> <C-W><C-K>
 noremap <C-l> <C-W><C-L>
