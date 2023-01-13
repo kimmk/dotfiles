@@ -7,6 +7,7 @@ use {
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 use 'nvim-lua/plenary.nvim'
+use 'matbme/JABS.nvim'
 use 'nvim-telescope/telescope.nvim'
 use 'nvim-tree/nvim-tree.lua'
 use 'willthbill/opener.nvim'
