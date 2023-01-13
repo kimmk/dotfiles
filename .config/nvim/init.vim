@@ -1,4 +1,8 @@
 
+lua require("plugins")
+lua require("setup-nvim-tree")
+lua require("setup-lualine")
+
 set number
 set splitbelow
 set splitright
@@ -23,8 +27,4 @@ noremap <A-f> <cmd>Telescope find_files<cr>
 noremap <A-g> <cmd>Telescope live_grep<cr>
 noremap <A-d> <cmd>Telescope buffers<cr>
 noremap <A-p> <cmd>Telescope help_tags<cr>
-
-lua require("plugins")
-lua require("setup-nvim-tree")
-lua require("setup-lualine")
 
