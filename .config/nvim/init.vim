@@ -2,6 +2,7 @@
 lua require("plugins")
 lua require("setup-nvim-tree")
 lua require("setup-lualine")
+lua require("clipboard")
 
 set number
 set splitbelow
