@@ -14,12 +14,8 @@ export EDITOR=nvim
 
 # Paths
 export PATH=$PATH:${HOME}/.cargo/bin
-export PATH=$PATH:${HOME}/software/gopath/bin
-export PATH=$PATH:${HOME}/software/xtensa-esp32-elf/bin
-export IDF_PATH=${HOME}/software/esp-idf
-alias esptool=${HOME}/software/esp-idf/components/esptool_py/esptool/esptool.py
 
-# Random aliases
+# Aliases
 alias i3sw=i3-swallow
 
 # Enable vi-mode
