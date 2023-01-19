@@ -15,6 +15,7 @@ set smartindent
 
 colorscheme catppuccin
 
+imap <C-H> <C-W>
 noremap <C-j> <C-W><C-J>
 noremap <C-k> <C-W><C-K>
 noremap <C-l> <C-W><C-L>
