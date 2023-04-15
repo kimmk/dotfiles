@@ -235,6 +235,9 @@ for_window [class="Gitk"] floating enable
 # run X specific settings
 exec sh ~/.config/xsettings
 
+# set wallpaper
+exec feh --bg-fill ~/.local/share/wp.jpg
+
 # autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
