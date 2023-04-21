@@ -25,10 +25,6 @@ vnoremap x "_x
 nnoremap d "_d
 vnoremap d "_d
 imap <C-H> <C-W>
-noremap <C-j> <C-W><C-J>
-noremap <C-k> <C-W><C-K>
-noremap <C-l> <C-W><C-L>
-noremap <C-h> <C-W><C-H>
 noremap <A-h> <C-W><
 noremap <A-l> <C-W>>
 noremap <A-j> <C-W>-
