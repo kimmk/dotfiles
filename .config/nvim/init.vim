@@ -7,7 +7,7 @@ lua require("clipboard")
 set number
 set splitbelow
 set splitright
-set clipboard=unnamedplus
+set clipboard+=unnamed
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -16,6 +16,14 @@ set updatetime=100
 
 colorscheme catppuccin
 
+nnoremap y "+y
+vnoremap y "+y
+nnoremap p "+p
+vnoremap p "+p
+nnoremap x "_x
+vnoremap x "_x
+nnoremap d "_d
+vnoremap d "_d
 imap <C-H> <C-W>
 noremap <C-j> <C-W><C-J>
 noremap <C-k> <C-W><C-K>
