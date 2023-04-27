@@ -19,6 +19,7 @@ set updatetime=100
 
 colorscheme catppuccin
 
+let mapleader = "\<space>"
 nnoremap y "+y
 vnoremap y "+y
 nnoremap p "+p
@@ -32,9 +33,8 @@ noremap <A-h> <C-W><
 noremap <A-l> <C-W>>
 noremap <A-j> <C-W>-
 noremap <A-k> <C-W>+
-noremap <A-e> :NvimTreeFindFileToggle<cr>
-noremap <A-f> <cmd>Telescope find_files<cr>
-noremap <A-g> <cmd>Telescope live_grep<cr>
-noremap <A-d> <cmd>Telescope buffers<cr>
-noremap <A-p> <cmd>Telescope help_tags<cr>
-
+nnoremap <leader>e <cmd>NvimTreeFindFileToggle<cr>
+nnoremap <leader>f <cmd>Telescope find_files<cr>
+nnoremap <leader>g <cmd>Telescope live_grep<cr>
+nnoremap <leader>r <cmd>Telescope buffers<cr>
+nnoremap <leader>p <cmd>Telescope help_tags<cr>
