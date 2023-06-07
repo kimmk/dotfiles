@@ -3,20 +3,8 @@ env:
 
 font:
   normal:
-    family: Dejavu Sans Mono Nerd Font
+    family: Hack Nerd Font Mono
     style: Regular
-
-  bold:
-    family: DejaVu Sans Mono Nerd Font
-    style: Bold
-
-  italic:
-    family: DejaVu Sans Mono Nerd Font
-    style: Italic
-
-  bold_italic:
-    family: DejaVu Sans Mono Nerd Font
-    style: Bold Italic
 
   size: 12
   offset:
