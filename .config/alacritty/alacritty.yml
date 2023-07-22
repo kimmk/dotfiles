@@ -3,7 +3,7 @@ env:
 
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: Dejavu Sans Mono
     style: Regular
 
   size: 12
