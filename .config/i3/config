@@ -183,6 +183,7 @@ bar {
 
 # screenshots with flameshot
 bindsym Print exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui
 
 # color picker
 bindsym --release $mod+p exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xclip -selection clipboard
