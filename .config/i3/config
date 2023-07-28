@@ -242,5 +242,5 @@ exec feh --bg-fill ~/.local/share/wp.jpg
 # autostart applications
 exec redshift -l 60.27:22.16 -t 6000:3000 -b 1.0:0.8
 
-exec dex -ae i3
+exec --no-startup-id dex -ae i3
 
