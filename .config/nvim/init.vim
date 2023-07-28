@@ -16,6 +16,8 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set updatetime=100
+set listchars=space:·,tab:»·
+set list
 
 colorscheme catppuccin
 

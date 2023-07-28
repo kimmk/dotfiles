@@ -240,7 +240,7 @@ exec sh ~/.config/xsettings
 exec feh --bg-fill ~/.local/share/wp.jpg
 
 # autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec redshift -l 60.27:22.16 -t 6000:3000 -b 1.0:0.8
 
 exec dex -ae i3
+
