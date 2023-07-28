@@ -25,7 +25,7 @@ bindsym $mod+Shift+q kill
 bindsym --release $mod+button2 kill
 
 # dmenu
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="rofi -dmenu -i"
+bindsym $mod+d exec i3-dmenu-desktop --dmenu="rofi -dmenu -i"
 
 # change focus
 bindsym $mod+h focus left
