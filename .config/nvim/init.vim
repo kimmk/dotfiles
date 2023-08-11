@@ -1,10 +1,5 @@
 
 lua require("plugins")
-lua require("setup-nvim-tree")
-lua require("setup-lualine")
-lua require("setup-clangd")
-lua require("setup-copilot")
-lua require("setup-cmp")
 lua require("clipboard")
 
 set number
