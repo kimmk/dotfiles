@@ -79,6 +79,7 @@ use 'airblade/vim-gitgutter'
 
 use {
   'zbirenbaum/copilot.lua',
+  cmd = 'Copilot',
   config = function ()
     require("copilot").setup({
       suggestion = { enabled = false },
