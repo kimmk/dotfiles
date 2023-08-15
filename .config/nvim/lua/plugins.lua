@@ -21,36 +21,7 @@ use 'neovim/nvim-lspconfig'
 
 use 'hrsh7th/vim-vsnip'
 
-use {
-  'hrsh7th/nvim-cmp',
-  config = function ()
-    local cmp = require'cmp'
-    cmp.setup {
-      snippet = {
-        expand = function(args)
-          vim.fn["vsnip#anonymous"](args.body)
-        end,
-      },
-      mapping = cmp.mapping.preset.insert({
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({
-          select = true,
-        }),
-      }),
-      sources = {
-        { name = 'nvim_lsp' },
-        { name = 'copilot' },
-      }
-    }
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    require'lspconfig'.clangd.setup {
-      capabilities = capabilities,
-    }
-  end
-}
+use 'hrsh7th/nvim-cmp'
 
 use 'hrsh7th/cmp-nvim-lsp'
 
@@ -100,12 +71,38 @@ use {
   "folke/which-key.nvim",
   config = function()
     vim.o.timeout = true
-    vim.o.timeoutlen = 300
+    vim.o.timeoutlen = 250
     require("which-key").setup {}
   end
 }
 
 use { "catppuccin/nvim", as = "catppuccin" }
+
+require('lspconfig').pyright.setup({})
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  callback = function(ev)
+    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+    local opts = { buffer = ev.buf }
+    vim.keymap.set('n', '<space>td', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', '<space>tD', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', '<space>ti', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    vim.keymap.set('n', '<space>wl', function()
+      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    end, opts)
+    vim.keymap.set('n', '<space>tt', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', '<space>tR', vim.lsp.buf.rename, opts)
+    vim.keymap.set({ 'n', 'v' }, '<space>ta', vim.lsp.buf.code_action, opts)
+    vim.keymap.set('n', '<space>tr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', '<space>tf', function()
+      vim.lsp.buf.format { async = true }
+    end, opts)
+  end,
+})
 
 local lspconfig = require'lspconfig'
 lspconfig.clangd.setup{
@@ -120,6 +117,36 @@ lspconfig.clangd.setup{
   flags = {
     debounce_text_changes = 150,
   }
+}
+
+local cmp = require'cmp'
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({
+      select = true,
+    }),
+    ['<Tab>'] = cmp.mapping.confirm({
+      select = true,
+    }),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'buffers' },
+    { name = 'copilot' },
+  }
+}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require'lspconfig'.clangd.setup {
+  capabilities = capabilities,
 }
 
 end)
