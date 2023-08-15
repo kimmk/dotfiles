@@ -23,6 +23,14 @@ noremap <A-h> <C-W><
 noremap <A-l> <C-W>>
 noremap <A-j> <C-W>-
 noremap <A-k> <C-W>+
+nnoremap <leader>Y "+Y
+vnoremap <leader>Y "+Y
+nnoremap <leader>P "+P
+vnoremap <leader>P "+P
+nnoremap <leader>X "+X
+vnoremap <leader>X "+X
+nnoremap <leader>D "+D
+vnoremap <leader>D "+D
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
