@@ -44,4 +44,5 @@ nnoremap <leader>f <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <leader>r <cmd>Telescope buffers<cr>
 nnoremap <leader>? <cmd>Telescope help_tags<cr>
+nnoremap <leader>q <cmd>ClangdSwitchSourceHeader<cr>
 
