@@ -2,7 +2,7 @@
 lua require("plugins")
 lua require("clipboard")
 
-set number
+set number relativenumber
 set splitbelow
 set splitright
 set tabstop=4
@@ -10,7 +10,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set updatetime=100
-set listchars=space:·,tab:»·
+set listchars=space:·,tab:»·,leadmultispace:~···
 set list
 
 colorscheme catppuccin

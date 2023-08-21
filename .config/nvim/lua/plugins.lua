@@ -84,6 +84,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
     local opts = { buffer = ev.buf }
+    vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gD', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', '<space>td', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', '<space>tD', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
