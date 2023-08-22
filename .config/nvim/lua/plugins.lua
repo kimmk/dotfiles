@@ -140,11 +140,10 @@ cmp.setup {
       select = true,
     }),
   }),
-  sources = {
+  sources = cmp.config.sources ({
     { name = 'nvim_lsp' },
-    { name = 'buffers' },
     { name = 'copilot' },
-  }
+  })
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require'lspconfig'.clangd.setup {
