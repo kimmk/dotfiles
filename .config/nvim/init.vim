@@ -39,6 +39,9 @@ nnoremap <leader>x "+x
 vnoremap <leader>x "+x
 nnoremap <leader>d "+d
 vnoremap <leader>d "+d
+nnoremap <leader>b <cmd>b#<cr>
+nnoremap <leader>w <cmd>bprev<cr>
+nnoremap <leader>W <cmd>bnext<cr>
 nnoremap <leader>e <cmd>NvimTreeFindFileToggle<cr>
 nnoremap <leader>f <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
