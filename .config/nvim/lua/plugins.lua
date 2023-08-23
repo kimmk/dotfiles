@@ -150,5 +150,14 @@ require'lspconfig'.clangd.setup {
   capabilities = capabilities,
 }
 
+local telescope = require('telescope')
+telescope.setup({
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  }
+})
+
 end)
 
