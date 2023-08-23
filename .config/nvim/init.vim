@@ -42,7 +42,8 @@ vnoremap <leader>d "+d
 nnoremap <leader>b <cmd>b#<cr>
 nnoremap <leader>w <cmd>bprev<cr>
 nnoremap <leader>W <cmd>bnext<cr>
-nnoremap <leader>e <cmd>NvimTreeFindFileToggle<cr>
+nnoremap <leader>e <cmd>NvimTreeFindFile<cr>
+nnoremap <leader>E <cmd>NvimTreeClose<cr>
 nnoremap <leader>f <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <leader>r <cmd>Telescope buffers<cr>
