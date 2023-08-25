@@ -4,7 +4,7 @@ font pango:Dejavu Sans Mono 10
 hide_edge_borders both 
 
 set $wallpaper ~/.local/share/wp.png
-set $app-terminal /home/kkorpelin/.cargo/bin/alacritty
+set $app-terminal alacritty
 set $app-fileman thunar
 
 bindsym $mod+Return exec $app-terminal
@@ -136,7 +136,8 @@ bar {
 
     font pango:monospace 10
     status_command i3blocks
-    workspace_min_width 40
+    separator_symbol ") ("
+    workspace_min_width 30
     position top
     mode dock
     tray_output primary

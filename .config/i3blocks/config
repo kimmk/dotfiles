@@ -20,16 +20,39 @@
 # signal
 # urgent
 
-command=~/.local/bin/blocks/$BLOCK_NAME
-separator_block_width=20
-separator="|"
 markup=pango
 
-[battery]
-command=echo $([[ $(acpi -a | cut -d ' ' -f3) == "on-line" ]] && echo ⚡ || echo 🔋)$(acpi -b | grep -Eo '[0-9]{1,}%') 
-interval=10
+[]
+full_text=( 
+separator=false
+separator_block_width=0
+
+[net]
+command=~/.config/i3blocks/net 2
+interval=2
+
+[disk]
+command=~/.config/i3blocks/disk
+interval=30
+
+[mem]
+command=~/.config/i3blocks/mem
+interval=5
+
+[cpu]
+command=~/.config/i3blocks/cpu 5
+interval=5
+
+[bat]
+command=~/.config/i3blocks/bat
+interval=30
 
 [time]
 command=echo $(date '+%d-%m-%Y %H:%M ')
 interval=1
+separator=false
+separator_block_width=0
+
+[]
+full_text= ) 
 
