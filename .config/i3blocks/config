@@ -22,11 +22,6 @@
 
 markup=pango
 
-[]
-full_text=( 
-separator=false
-separator_block_width=0
-
 [net]
 command=~/.config/i3blocks/net 2
 interval=2
@@ -50,9 +45,4 @@ interval=30
 [time]
 command=echo $(date '+%d-%m-%Y %H:%M ')
 interval=1
-separator=false
-separator_block_width=0
-
-[]
-full_text= ) 
 

@@ -136,7 +136,7 @@ bar {
 
     font pango:monospace 10
     status_command i3blocks
-    separator_symbol ") ("
+    separator_symbol " "
     workspace_min_width 30
     position top
     mode dock

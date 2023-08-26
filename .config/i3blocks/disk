@@ -1,3 +1,3 @@
 #!/bin/bash
-df -B G / | awk 'NR==2 {printf "DSK %02d\n", $5}'
+df -B G / | awk 'NR==2 {printf "( DSK %02d )\n", $5}'
 
