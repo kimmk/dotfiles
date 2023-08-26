@@ -1,4 +1,4 @@
 #!/bin/bash
-[[ $(acpi -a | cut -d ' ' -f3) == "on-line" ]] && printf '( AC' || printf '( BAT'
-acpi -b | cut -d ',' -f2 | awk '{printf " %02d )\n", $1}'
+[[ $(acpi -a | cut -d ' ' -f3) == "on-line" ]] && printf '[ AC' || printf '[ BAT'
+acpi -b | cut -d ',' -f2 | awk '{printf " %02d ]\n", $1}'
 

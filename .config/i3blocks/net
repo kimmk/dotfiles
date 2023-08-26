@@ -8,5 +8,5 @@ rx1=$(cat /sys/class/net/$iface/statistics/rx_bytes)
 tx1=$(cat /sys/class/net/$iface/statistics/tx_bytes)
 rx=$((($rx1 - $rx0) / 1024))
 tx=$((($tx1 - $tx0) / 1024))
-printf "( $iface ⬇️ $rx KB/s ⬆️ $tx KB/s )\n"
+printf "[ $iface ⬇️ $rx KB/s ⬆️ $tx KB/s ]\n"
 
