@@ -43,6 +43,6 @@ command=~/.config/i3blocks/bat
 interval=30
 
 [time]
-command=echo $(date '+%d-%m-%Y %H:%M ')
+command=echo "( $(date '+%d-%m-%Y %H:%M') ) "
 interval=1
 
