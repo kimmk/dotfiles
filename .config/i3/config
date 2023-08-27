@@ -15,6 +15,7 @@ bindsym $mod+Shift+q kill
 bindsym --release $mod+button2 kill
 
 bindsym $mod+d exec i3-dmenu-desktop --dmenu="rofi -dmenu -i"
+bindsym $mod+Tab exec rofi -show window
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
