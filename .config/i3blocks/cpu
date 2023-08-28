@@ -1,3 +1,4 @@
 #!/bin/bash
-iostat -o JSON -yc $1 1 | jq '.sysstat.hosts[0].statistics[0]["avg-cpu"].idle' | awk '{printf "[ CPU %02d ]\n", 100-$1}'
+t=${1:-1}
+iostat -o JSON -yc $t 1 | jq '.sysstat.hosts[0].statistics[0]["avg-cpu"].idle' | awk '{printf "[ CPU %02d ]\n", 100-$1}'
 
