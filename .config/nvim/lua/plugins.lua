@@ -155,7 +155,11 @@ telescope.setup({
   pickers = {
     find_files = {
       hidden = true
-    }
+    },
+    buffers = {
+      sort_lastused = true,
+      sort_mru = true,
+    },
   }
 })
 
