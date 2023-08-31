@@ -3,6 +3,7 @@ lua require("plugins")
 lua require("clipboard")
 
 set number relativenumber
+set cursorline
 set splitbelow
 set splitright
 set scrolloff=5
