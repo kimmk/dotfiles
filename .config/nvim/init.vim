@@ -5,6 +5,7 @@ lua require("clipboard")
 set number relativenumber
 set splitbelow
 set splitright
+set scrolloff=5
 set tabstop=4
 set shiftwidth=4
 set expandtab
