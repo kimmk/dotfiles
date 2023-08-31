@@ -156,8 +156,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 # toggle redshift
 bindsym $mod+F9 exec pkill -USR1 redshift
 
-set $mode_system [l] lock screen | [shift+e] logout | [s] suspend | [h] hibernate | [shift+r] reboot | [shift+s] shutdown
+set $mode_system [f] screen off | [l] lock screen | [shift+e] logout | [s] suspend | [h] hibernate | [shift+r] reboot | [shift+s] shutdown
 mode "$mode_system" {
+     bindsym f mode "default", exec --no-startup-id xset dpms force off
      bindsym l mode "default", exec --no-startup-id i3lock -c000000 -i $wallpaper
      bindsym Shift+e mode "default", exec --no-startup-id i3-msg exit
      bindsym s mode "default", exec --no-startup-id i3lock -c000000 -i $wallpaper && systemctl suspend
