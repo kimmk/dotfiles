@@ -114,25 +114,33 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# class                 border  bground text    indicator child_border
-client.focused          #373C4C #5A647E #FFFFFF #2E9EF4   #285577
-client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
-client.unfocused        #333333 #222222 #888888 #292D2E   #222222
-client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+set_from_resource $c0 i3wm.color0 #000000
+set_from_resource $c1 i3wm.color1 #000000
+set_from_resource $c2 i3wm.color2 #303030
+set_from_resource $c3 i3wm.color3 #333333
+set_from_resource $c4 i3wm.color4 #373c4c
+set_from_resource $c5 i3wm.color5 #f0f0f0
+set_from_resource $c6 i3wm.color6 #f0f0f0
+set_from_resource $c7 i3wm.color7 #f0f0f0
 
-client.background       #FFFFFF
+# class                 border  backgr. text indicator child_border
+client.focused          $c4     $c4     $c0  $c0       $c1
+client.focused_inactive $c3     $c3     $c0  $c0       $c1
+client.unfocused        $c2     $c2     $c0  $c0       $c1
+client.urgent           $c4     $c4     $c0  $c4       $c4
+client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
+client.background       $c1
 
 bar {
     colors {
-        background #000000
-        statusline #FFFFFF
-        separator  #666666
-        focused_workspace  #4C7899 #285577 #FFFFFF
-        active_workspace   #333333 #222222 #FFFFFF
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2F343A #900000 #FFFFFF
-        binding_mode       #2F343A #900000 #FFFFFF
+        background $c0
+        statusline $c6
+        separator  $c6
+        focused_workspace  $c3 $c4 #ffffff
+        active_workspace   $c2 $c4 #ffffff
+        inactive_workspace $c1 $c4 #888888
+        urgent_workspace   $c4 $c2 #ffffff
+        binding_mode       $c4 $c2 #ffffff
     }
     font pango:Terminus Bold 10.5
     status_command i3blocks
