@@ -1,4 +1,12 @@
-#!/bin/bash
+#/bin/bash
+calc_rate () {
+    rate=$((($1 - $2) / $3))
+    if [ "$rate" -lt 1024 ] && [ "$rate" -gt 0 ]; then
+        echo "  &lt;1"
+    else
+        echo $(($rate / 1024))
+    fi
+}
 t=${1:-1}
 iface=$(ip route | grep default | awk '{print $5}')
 rx0=$(cat /sys/class/net/$iface/statistics/rx_bytes)
@@ -6,7 +14,7 @@ tx0=$(cat /sys/class/net/$iface/statistics/tx_bytes)
 sleep $t
 rx1=$(cat /sys/class/net/$iface/statistics/rx_bytes)
 tx1=$(cat /sys/class/net/$iface/statistics/tx_bytes)
-rx=$((($rx1 - $rx0) / 1024 / $t))
-tx=$((($tx1 - $tx0) / 1024 / $t))
-printf "[ $iface DN %4d KB/s UP %4d KB/s ]\n" $rx $tx
+rx=$(calc_rate $rx1 $rx0 $t)
+tx=$(calc_rate $tx1 $tx0 $t)
+printf "[ $iface %4s KB/s DN %4s KB/s UP ]\n" "$rx" "$tx"
 
