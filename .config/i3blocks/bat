@@ -1,4 +1,4 @@
 #!/bin/bash
 [[ $(acpi -a | cut -d ' ' -f3) == "on-line" ]] && printf '[ AC' || printf '[ BAT'
-acpi -b | awk '!/Discharging, 0%/' | awk 'NR==1 {printf " %02d ]\n", $4}'
+acpi -b | awk '!/Discharging, 0%/' | awk -F',' 'NR==1 {printf " %02d ]\n", $2}'
 
