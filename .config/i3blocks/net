@@ -9,6 +9,7 @@ calc_rate () {
 }
 t=${1:-1}
 iface=$(ip route | grep default | awk '{print $5}')
+[ -z "$iface" ] && printf "[ &lt;no route> ]\n" && exit 0
 rx0=$(cat /sys/class/net/$iface/statistics/rx_bytes)
 tx0=$(cat /sys/class/net/$iface/statistics/tx_bytes)
 sleep $t
