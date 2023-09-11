@@ -17,6 +17,7 @@ export PATH=$PATH:${HOME}/.cargo/bin
 
 # Aliases
 alias i3sw=i3-swallow
+alias git-dotfiles="git --git-dir=${HOME}/.dotfiles --work-tree=${HOME}"
 
 # Enable vi-mode
 #bindkey -v
