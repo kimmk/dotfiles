@@ -34,6 +34,7 @@ use 'hrsh7th/nvim-cmp'
 use 'hrsh7th/cmp-nvim-lsp'
 
 use 'nvim-telescope/telescope.nvim'
+use 'nvim-telescope/telescope-fzy-native.nvim'
 
 use {
   'nvim-tree/nvim-tree.lua',
@@ -161,6 +162,7 @@ require'lspconfig'.clangd.setup {
 }
 
 local telescope = require('telescope')
+telescope.load_extension('fzy_native')
 telescope.setup({
   pickers = {
     find_files = {
