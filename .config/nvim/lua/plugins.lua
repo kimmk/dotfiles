@@ -11,6 +11,14 @@ use {
       options = {
         theme = "material"
       },
+      sections = {
+        lualine_a = {'mode'},
+        lualine_b = {'filename'},
+        lualine_c = {},
+        lualine_x = {'branch'},
+        lualine_y = {'encoding'},
+        lualine_z = {'location'}
+      }
   }
   end
 }
