@@ -166,7 +166,8 @@ telescope.load_extension('fzy_native')
 telescope.setup({
   pickers = {
     find_files = {
-      hidden = true
+      hidden = true,
+      ignore_case = true,
     },
     buffers = {
       sort_lastused = true,
