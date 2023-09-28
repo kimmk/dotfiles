@@ -1,0 +1,23 @@
+#!/bin/bash
+
+editor=$(which nvim)
+declare -A cf
+cf["cf"]=$0
+cf["nvim"]="${HOME}/.config/nvim/init.vim"
+cf["tmux"]="${HOME}/.tmux.conf"
+cf["i3"]="${HOME}/.config/i3/config"
+cf["i3blocks"]="${HOME}/.config/i3blocks/config"
+cf["xres"]="${HOME}/.Xresources"
+cf["nvim_plugins"]="${HOME}/.config/nvim/lua/plugins.lua"
+
+scf=$1
+
+if [[ -v cf[$scf] ]]; then
+    cfg="${cf[$scf]}"
+    ${editor} ${cfg}
+    echo "edited config file '${cfg}'"
+else
+    echo "error: config file for '${scf}' not found."
+    exit 1
+fi
+
