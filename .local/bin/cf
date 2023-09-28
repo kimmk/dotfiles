@@ -9,6 +9,7 @@ cf["i3"]="${HOME}/.config/i3/config"
 cf["i3blocks"]="${HOME}/.config/i3blocks/config"
 cf["xres"]="${HOME}/.Xresources"
 cf["nvim_plugins"]="${HOME}/.config/nvim/lua/plugins.lua"
+cf["ranger"]="${HOME}/.config/ranger/rc.conf"
 
 scf=$1
 
