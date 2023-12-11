@@ -49,6 +49,6 @@ nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <leader>r <cmd>Telescope buffers<cr>
 nnoremap <leader>? <cmd>Telescope help_tags<cr>
 nnoremap <leader>q <cmd>ClangdSwitchSourceHeader<cr>
-nnoremap <leader>hb <cmd>terminal git blame -c %<CR>
-nnoremap <leader>hd <cmd>terminal git diff HEAD %<CR>
+nnoremap <leader>hb <cmd>terminal git --no-pager blame -c %<cr>
+nnoremap <leader>hd <cmd>terminal git --no-pager diff HEAD %<cr>
 
