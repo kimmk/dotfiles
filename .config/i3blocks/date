@@ -1,6 +1,6 @@
 #!/bin/bash
 case $BLOCK_BUTTON in
-  1) ncal -hb | sed "s/$(date +%e)/<b>&<\/b>/g" | rofi -dmenu -p 'Calendar' -markup-rows ;;
+  1) ncal -hb | sed "s/[ \n]$(date +%e)[ \n]/<b>&<\/b>/g" | rofi -dmenu -p 'Calendar' -markup-rows ;;
 esac
 echo "[ $(date '+%d-%m-%Y %H:%M') ] "
 
