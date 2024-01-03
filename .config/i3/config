@@ -5,7 +5,7 @@ hide_edge_borders both
 
 set $wallpaper ~/.local/share/wp.png
 set $app-lock i3lock -c000000 -i ~/.local/share/wp.png
-set $app-terminal /home/kkorpelin/.cargo/bin/alacritty
+set $app-terminal $(which alacritty)
 set $app-fileman thunar
 
 bindsym $mod+Return exec $app-terminal
