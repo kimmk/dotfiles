@@ -49,6 +49,7 @@ nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <leader>r <cmd>Telescope buffers<cr>
 nnoremap <leader>? <cmd>Telescope help_tags<cr>
 nnoremap <leader>q <cmd>ClangdSwitchSourceHeader<cr>
+nnoremap <leader>* <cmd>execute 'Telescope live_grep default_text=' . expand('<cword>')<cr>
 nnoremap <leader>hb <cmd>terminal git --no-pager blame -c % && sleep 0.05<cr>
 nnoremap <leader>hd <cmd>terminal git --no-pager diff HEAD % && sleep 0.05<cr>
 
