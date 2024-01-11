@@ -1,7 +1,3 @@
-
-lua require("plugins")
-lua require("clipboard")
-
 set number relativenumber
 set cursorline
 set splitbelow
@@ -16,6 +12,9 @@ set listchars=space:·,tab:»·,leadmultispace:~···
 set list
 
 colorscheme catppuccin
+
+lua require("plugins")
+lua require("clipboard")
 
 let mapleader = "\<space>"
 imap <C-H> <C-W>
