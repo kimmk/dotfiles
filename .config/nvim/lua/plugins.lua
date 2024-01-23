@@ -117,21 +117,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-local lspconfig = require'lspconfig'
-lspconfig.clangd.setup{
-  cmd = { "clangd", "--background-index", "--offset-encoding=utf-8",},
-  filetypes = { "c", "cpp", "objc", "objcpp" },
-  on_attach = function(client, bufnr)
-    require'completion'.on_attach(client, bufnr)
-  end,
-  root_dir = function(fname)
-    return lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")(fname) or lspconfig.util.path.dirname(fname)
-  end,
-  flags = {
-    debounce_text_changes = 150,
-  }
-}
-
 local cmp = require'cmp'
 cmp.setup {
   snippet = {
@@ -154,10 +139,23 @@ cmp.setup {
   sources = cmp.config.sources ({
     { name = 'nvim_lsp' },
     { name = 'copilot' },
-  })
+  }),
 }
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require'lspconfig'.clangd.setup {
+local lspconfig = require'lspconfig'
+lspconfig.clangd.setup{
+  cmd = { "clangd", "--header-insertion=never", "--background-index", "--offset-encoding=utf-8"},
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  on_attach = function(client, bufnr)
+    require'completion'.on_attach(client, bufnr)
+  end,
+  root_dir = function(fname)
+    return lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")(fname) or lspconfig.util.path.dirname(fname)
+  end,
+  flags = {
+    debounce_text_changes = 150,
+  },
   capabilities = capabilities,
 }
 
