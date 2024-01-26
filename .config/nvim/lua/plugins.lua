@@ -87,7 +87,48 @@ use {
 
 use { "catppuccin/nvim", as = "catppuccin" }
 
-require('lspconfig').pyright.setup({})
+local cmp = require'cmp'
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({
+      select = true,
+    }),
+    ['<Tab>'] = cmp.mapping.confirm({
+      select = true,
+    }),
+  }),
+  sources = cmp.config.sources ({
+    { name = 'nvim_lsp' },
+    { name = 'copilot' },
+  }),
+}
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+local lspconfig = require'lspconfig'
+lspconfig.pyright.setup {}
+lspconfig.clangd.setup {
+  cmd = { "clangd", "--header-insertion=never", "--background-index", "--offset-encoding=utf-8"},
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  root_dir = function(fname)
+    return lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")(fname) or lspconfig.util.path.dirname(fname)
+  end,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  capabilities = capabilities,
+}
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(ev)
@@ -116,48 +157,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
-
-local cmp = require'cmp'
-cmp.setup {
-  snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
-    end,
-  },
-  mapping = cmp.mapping.preset.insert({
-    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({
-      select = true,
-    }),
-    ['<Tab>'] = cmp.mapping.confirm({
-      select = true,
-    }),
-  }),
-  sources = cmp.config.sources ({
-    { name = 'nvim_lsp' },
-    { name = 'copilot' },
-  }),
-}
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local lspconfig = require'lspconfig'
-lspconfig.clangd.setup{
-  cmd = { "clangd", "--header-insertion=never", "--background-index", "--offset-encoding=utf-8"},
-  filetypes = { "c", "cpp", "objc", "objcpp" },
-  on_attach = function(client, bufnr)
-    require'completion'.on_attach(client, bufnr)
-  end,
-  root_dir = function(fname)
-    return lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")(fname) or lspconfig.util.path.dirname(fname)
-  end,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  capabilities = capabilities,
-}
 
 local telescope = require('telescope')
 telescope.load_extension('fzy_native')
