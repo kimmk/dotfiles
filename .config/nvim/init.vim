@@ -16,7 +16,7 @@ colorscheme catppuccin
 lua require("plugins")
 lua require("clipboard")
 
-# autocmd FileType c,cpp,objc,objcpp autocmd BufWritePost <buffer> LspRestart
+" autocmd FileType c,cpp,objc,objcpp autocmd BufWritePost <buffer> LspRestart
 
 let mapleader = "\<space>"
 imap <C-H> <C-W>
