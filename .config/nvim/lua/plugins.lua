@@ -24,17 +24,17 @@ use {
 }
 
 use 'nvim-lua/plenary.nvim'
-
 use 'neovim/nvim-lspconfig'
-
 use 'hrsh7th/vim-vsnip'
-
 use 'hrsh7th/nvim-cmp'
-
 use 'hrsh7th/cmp-nvim-lsp'
-
 use 'nvim-telescope/telescope.nvim'
 use 'nvim-telescope/telescope-fzy-native.nvim'
+
+use {
+    'junegunn/fzf.vim',
+    requires = { 'junegunn/fzf', run = ':call fzf#install()' }
+ }
 
 use {
   'nvim-tree/nvim-tree.lua',
