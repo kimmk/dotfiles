@@ -57,24 +57,24 @@ use 'ryanoasis/vim-devicons'
 
 use 'airblade/vim-gitgutter'
 
-use {
-  'zbirenbaum/copilot.lua',
-  cmd = 'Copilot',
-  config = function ()
-    require("copilot").setup({
-      suggestion = { enabled = false },
-      panel = { enabled = false },
-    })
-  end
-}
+--use {
+--  'zbirenbaum/copilot.lua',
+--  cmd = 'Copilot',
+--  config = function ()
+--    require("copilot").setup({
+--      suggestion = { enabled = false },
+--      panel = { enabled = false },
+--    })
+--  end
+--}
 
-use {
-  'zbirenbaum/copilot-cmp',
-  after = { 'copilot.lua' },
-  config = function ()
-    require("copilot_cmp").setup()
-  end
-}
+--use {
+--  'zbirenbaum/copilot-cmp',
+--  after = { 'copilot.lua' },
+--  config = function ()
+--    require("copilot_cmp").setup()
+--  end
+--}
 
 use {
   "folke/which-key.nvim",
@@ -108,7 +108,7 @@ cmp.setup {
   }),
   sources = cmp.config.sources ({
     { name = 'nvim_lsp' },
-    { name = 'copilot' },
+    --{ name = 'copilot' },
   }),
 }
 
