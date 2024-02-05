@@ -45,12 +45,12 @@ vnoremap <leader>d "+d
 nnoremap <leader>w <cmd>b#<cr>
 nnoremap <leader>e <cmd>NvimTreeFindFile<cr>
 nnoremap <leader>E <cmd>NvimTreeClose<cr>
-nnoremap <leader>f <cmd>Telescope find_files<cr>
-nnoremap <leader>g <cmd>Telescope live_grep<cr>
-nnoremap <leader>r <cmd>Telescope buffers<cr>
-nnoremap <leader>? <cmd>Telescope help_tags<cr>
+nnoremap <leader>f <cmd>Files<cr>
+nnoremap <leader>g <cmd>Rg<cr>
+nnoremap <leader>r <cmd>Buffers<cr>
+nnoremap <leader>? <cmd>Helptags<cr>
 nnoremap <leader>q <cmd>ClangdSwitchSourceHeader<cr>
-nnoremap <leader>* <cmd>execute 'Telescope live_grep default_text=' . expand('<cword>')<cr>
+nnoremap <leader>* <cmd>execute 'Rg '. expand('<cword>')<cr>
 nnoremap <leader>hb <cmd>terminal git --no-pager blame -c % && sleep 0.05<cr>
 nnoremap <leader>hd <cmd>terminal git --no-pager diff HEAD % && sleep 0.05<cr>
 

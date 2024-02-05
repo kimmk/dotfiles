@@ -28,8 +28,6 @@ use 'neovim/nvim-lspconfig'
 use 'hrsh7th/vim-vsnip'
 use 'hrsh7th/nvim-cmp'
 use 'hrsh7th/cmp-nvim-lsp'
-use 'nvim-telescope/telescope.nvim'
-use 'nvim-telescope/telescope-fzy-native.nvim'
 
 use {
     'junegunn/fzf.vim',
@@ -156,21 +154,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.lsp.buf.format { async = true }
     end, opts)
   end,
-})
-
-local telescope = require('telescope')
-telescope.load_extension('fzy_native')
-telescope.setup({
-  pickers = {
-    find_files = {
-      hidden = true,
-      ignore_case = true,
-    },
-    buffers = {
-      sort_lastused = true,
-      sort_mru = true,
-    },
-  }
 })
 
 end)
