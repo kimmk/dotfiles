@@ -4,6 +4,7 @@ editor=$(which nvim)
 declare -A cf
 cf["cf"]=$0
 cf["nvim"]="${HOME}/.config/nvim/init.vim"
+cf["nvim-plugins"]="${HOME}/.config/nvim/lua/plugins.lua"
 cf["tmux"]="${HOME}/.tmux.conf"
 cf["i3"]="${HOME}/.config/i3/config"
 cf["i3blocks"]="${HOME}/.config/i3blocks/config"
