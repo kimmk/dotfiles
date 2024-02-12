@@ -25,6 +25,7 @@ use {
 
 use 'nvim-lua/plenary.nvim'
 use 'neovim/nvim-lspconfig'
+use 'simrat39/rust-tools.nvim'
 use 'hrsh7th/vim-vsnip'
 use 'hrsh7th/nvim-cmp'
 use 'hrsh7th/cmp-nvim-lsp'
@@ -126,6 +127,7 @@ lspconfig.clangd.setup {
   },
   capabilities = capabilities,
 }
+lspconfig.rust_analyzer.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
