@@ -158,8 +158,8 @@ bindsym $mod+Shift+s exec flameshot gui
 bindsym --release $mod+p exec colorpicker --one-shot | sed 's/.*Hex: #//g' | xclip -selection clipboard
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 && notify-send -r 778899 "brightness $(xbacklight -get)%"
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 && notify-send -r 778899 "brightness $(xbacklight -get)%"
 
 # toggle redshift
 bindsym $mod+F9 exec pkill -USR1 redshift
