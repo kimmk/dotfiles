@@ -11,6 +11,7 @@ cf["i3blocks"]="${HOME}/.config/i3blocks/config"
 cf["xres"]="${HOME}/.Xresources"
 cf["nvim_plugins"]="${HOME}/.config/nvim/lua/plugins.lua"
 cf["ranger"]="${HOME}/.config/ranger/rc.conf"
+cf["alacritty"]="${HOME}/.config/alacritty/alacritty.toml"
 
 scf=$1
 
