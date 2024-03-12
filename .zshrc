@@ -13,7 +13,7 @@ unsetopt share_history
 export EDITOR=nvim
 
 # Paths
-export PATH=$PATH:${HOME}/.cargo/bin
+export PATH=${PATH}:${HOME}/.local/bin:${HOME}/.cargo/bin
 
 # Aliases
 alias i3sw=i3-swallow
