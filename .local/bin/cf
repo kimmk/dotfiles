@@ -12,6 +12,7 @@ cf["xres"]="${HOME}/.Xresources"
 cf["nvim_plugins"]="${HOME}/.config/nvim/lua/plugins.lua"
 cf["ranger"]="${HOME}/.config/ranger/rc.conf"
 cf["alacritty"]="${HOME}/.config/alacritty/alacritty.toml"
+cf["zsh"]="${HOME}/.zshrc"
 
 scf=$1
 
