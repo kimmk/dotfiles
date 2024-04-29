@@ -46,8 +46,8 @@ nnoremap <leader>w <cmd>b#<cr>
 nnoremap <leader>e <cmd>NvimTreeFindFile<cr>
 nnoremap <leader>E <cmd>NvimTreeClose<cr>
 nnoremap <leader>. <cmd>NvimTreeCollapse<cr>
-nnoremap <leader>f <cmd>GFiles<cr>
-nnoremap <leader>F <cmd>Files<cr>
+nnoremap <leader>F <cmd>GFiles<cr>
+nnoremap <leader>f <cmd>Files<cr>
 nnoremap <leader>g <cmd>Rg<cr>
 nnoremap <leader>r <cmd>Buffers<cr>
 nnoremap <leader>? <cmd>Helptags<cr>
