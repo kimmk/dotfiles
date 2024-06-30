@@ -100,18 +100,25 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 mode "resize" {
-        set $size 1
-        bindsym h resize shrink width $size px or $size ppt
-        bindsym j resize grow height $size px or $size ppt
-        bindsym k resize shrink height $size px or $size ppt
-        bindsym l resize grow width $size px or $size ppt
-        bindsym Left resize shrink width $size px or $size ppt
-        bindsym Down resize grow height $size px or $size ppt
-        bindsym Up resize shrink height $size px or $size ppt
-        bindsym Right resize grow width $size px or $size ppt
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    set $step_norm 20
+    set $step_alt 1
+    bindsym h resize shrink width $step_norm px or $step_norm ppt
+    bindsym j resize grow height $step_norm px or $step_norm ppt
+    bindsym k resize shrink height $step_norm px or $step_norm ppt
+    bindsym l resize grow width $step_norm px or $step_norm ppt
+    bindsym Left resize shrink width $step_norm px or $step_norm ppt
+    bindsym Down resize grow height $step_norm px or $step_norm ppt
+    bindsym Up resize shrink height $step_norm px or $step_norm ppt
+    bindsym Right resize grow width $step_norm px or $step_norm ppt
+    bindsym Shift+k resize shrink height $step_alt px or $step_alt ppt
+    bindsym Shift+l resize grow width $step_alt px or $step_alt ppt
+    bindsym Shift+Left resize shrink width $step_alt px or $step_alt ppt
+    bindsym Shift+Down resize grow height $step_alt px or $step_alt ppt
+    bindsym Shift+Up resize shrink height $step_alt px or $step_alt ppt
+    bindsym Shift+Right resize grow width $step_alt px or $step_alt ppt
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
