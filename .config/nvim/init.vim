@@ -49,6 +49,7 @@ nnoremap <leader>. <cmd>NvimTreeCollapse<cr>
 nnoremap <leader>F <cmd>GFiles<cr>
 nnoremap <leader>f <cmd>Files<cr>
 nnoremap <leader>g <cmd>RG<cr>
+nnoremap <leader>G <cmd>Rg<cr>
 nnoremap <leader>r <cmd>Buffers<cr>
 nnoremap <leader>? <cmd>Helptags<cr>
 nnoremap <leader>q <cmd>ClangdSwitchSourceHeader<cr>
