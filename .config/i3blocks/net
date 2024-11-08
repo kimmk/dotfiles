@@ -2,7 +2,7 @@
 calc_rate () {
     rate=$((($1 - $2) / $3))
     if [ "$rate" -lt 1024 ] && [ "$rate" -gt 0 ]; then
-        echo "  &lt;1"
+        echo "   &lt;1"
     else
         echo $(($rate / 1024))
     fi
@@ -17,5 +17,5 @@ rx1=$(cat /sys/class/net/$iface/statistics/rx_bytes)
 tx1=$(cat /sys/class/net/$iface/statistics/tx_bytes)
 rx=$(calc_rate $rx1 $rx0 $t)
 tx=$(calc_rate $tx1 $tx0 $t)
-printf "[ $iface %4s KB/s DN %4s KB/s UP ]\n" "$rx" "$tx"
+printf "[ $iface %5s KB/s DN %5s KB/s UP ]\n" "$rx" "$tx"
 
