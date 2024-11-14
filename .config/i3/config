@@ -171,7 +171,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 && notify-send -r 778899 "b
 # toggle redshift
 bindsym $mod+F9 exec pkill -USR1 redshift
 
-set $mode_system [f] screen off | [l] lock screen | [shift+e] logout | [s] suspend | [h] hibernate | [shift+r] reboot | [shift+s] shutdown
+set $mode_system [f] screen off | [l] lock screen | [shift+e] logout | [s] suspend | [h] hibernate | [shift+r] reboot | [shift+o] shutdown
 mode "$mode_system" {
      bindsym f mode "default", exec --no-startup-id xset dpms force off
      bindsym l mode "default", exec --no-startup-id $app-lock
@@ -179,7 +179,7 @@ mode "$mode_system" {
      bindsym s mode "default", exec --no-startup-id $app-lock && systemctl suspend
      bindsym h mode "default", exec --no-startup-id systemctl hibernate
      bindsym Shift+r exec --no-startup-id systemctl reboot
-     bindsym Shift+s exec --no-startup-id systemctl poweroff
+     bindsym Shift+o exec --no-startup-id systemctl poweroff
      bindsym Return mode "default"
      bindsym Escape mode "default"
 }
