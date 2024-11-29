@@ -11,6 +11,9 @@ set updatetime=100
 set listchars=space:·,tab:»·,leadmultispace:~···
 set list
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /[\r]\|\s\+$/
+
 colorscheme catppuccin
 
 lua require("plugins")
