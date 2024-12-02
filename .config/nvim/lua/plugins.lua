@@ -52,28 +52,33 @@ use {
   end
 }
 
+use 'lambdalisue/fern.vim'
+
 use 'ryanoasis/vim-devicons'
 
 use 'airblade/vim-gitgutter'
 
---use {
---  'zbirenbaum/copilot.lua',
---  cmd = 'Copilot',
---  config = function ()
---    require("copilot").setup({
---      suggestion = { enabled = false },
---      panel = { enabled = false },
---    })
---  end
---}
+use 'puremourning/vimspector'
 
---use {
---  'zbirenbaum/copilot-cmp',
---  after = { 'copilot.lua' },
---  config = function ()
---    require("copilot_cmp").setup()
---  end
---}
+use {
+  'zbirenbaum/copilot.lua',
+  cmd = 'Copilot',
+  config = function ()
+    require("copilot").setup({
+      filetypes = {
+        ["*"] = true,
+      },
+    })
+  end
+}
+
+use {
+  'zbirenbaum/copilot-cmp',
+  after = { 'copilot.lua' },
+  config = function ()
+    require("copilot_cmp").setup()
+  end
+}
 
 use {
   "folke/which-key.nvim",
@@ -107,9 +112,15 @@ cmp.setup {
   }),
   sources = cmp.config.sources ({
     { name = 'nvim_lsp' },
-    --{ name = 'copilot' },
+    { name = 'copilot' },
   }),
 }
+cmp.event:on("menu_opened", function()
+  vim.b.copilot_suggestion_hidden = true
+end)
+cmp.event:on("menu_closed", function()
+  vim.b.copilot_suggestion_hidden = false
+end)
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
