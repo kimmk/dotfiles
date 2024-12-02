@@ -107,7 +107,7 @@ cmp.setup {
       select = false,
     }),
     ['<Tab>'] = cmp.mapping.confirm({
-      select = true,
+      select = false,
     }),
   }),
   sources = cmp.config.sources ({
