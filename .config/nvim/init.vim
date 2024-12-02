@@ -57,6 +57,8 @@ nnoremap <leader>r <cmd>Buffers<cr>
 nnoremap <leader>? <cmd>Helptags<cr>
 nnoremap <leader>q <cmd>ClangdSwitchSourceHeader<cr>
 nnoremap <leader>* <cmd>execute 'Rg '. expand('<cword>')<cr>
+nnoremap <leader>c <cmd>Copilot enable<cr><cmd>Copilot attach<cr><cmd>Copilot status<cr>
+nnoremap <leader>C <cmd>Copilot disable<cr><cmd>Copilot status<cr>
 nnoremap <leader>hb <cmd>terminal git --no-pager blame -c % && sleep 0.05<cr>
 nnoremap <leader>hd <cmd>terminal git --no-pager diff HEAD % && sleep 0.05<cr>
 vnoremap <leader>hl <cmd>execute 'terminal git log -L ' . line("'<") . "," . line("'>") . ":%"<cr>
