@@ -17,6 +17,7 @@ bindsym --release $mod+button2 kill
 
 bindsym $mod+d exec i3-dmenu-desktop --dmenu="rofi -dmenu -i"
 bindsym $mod+Tab exec rofi -show window
+bindsym $mod+t exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
