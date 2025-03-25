@@ -1,14 +1,14 @@
 #!/bin/bash
 MAIN_NOTES="${HOME}/syncthing/projects/notes.txt"
 if [[ -n "$1" ]]; then
-    results=( $(fd -e txt "$1" "${HOME}/syncthing/projects/notes" 2>/dev/null) )
+    results=( $(fd -e .txt . "${HOME}/syncthing/projects/notes" 2>/dev/null | fzf --filter="$*") )
     notes_count=${#results[@]}
     if (( notes_count == 1 )); then
         nvim "${results[0]}"
     elif (( notes_count > 1 )); then
         printf "%s\n" "${results[@]}"
     else
-        echo "no notes found for query: '$1'"
+        echo "no notes found for query: '$*'"
     fi
 else
     nvim ${MAIN_NOTES}
