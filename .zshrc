@@ -19,6 +19,7 @@ export PATH=${PATH}:${HOME}/.local/bin:${HOME}/.cargo/bin
 # Aliases
 alias i3sw=i3-swallow
 alias git-dotfiles="git --git-dir=${HOME}/.dotfiles --work-tree=${HOME}"
+alias git-branch-latest="unbuffer git for-each-ref --sort=-committerdate refs/heads --format='%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))' | less -R"
 
 # Enable vi-mode
 #bindkey -v
