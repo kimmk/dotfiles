@@ -1,6 +1,7 @@
 export ZSH=${HOME}/.oh-my-zsh
 
-ZSH_THEME="kardan"
+export PS1="> "
+export RPS1="%F{11}\$(git branch --show-current 2>/dev/null)%f %F{2}%~%f %n@%m"
 
 DISABLE_AUTO_UPDATE="true"
 
