@@ -1,3 +1,12 @@
+lua require("config.lazy")
+lua require("clipboard")
+
+lua vim.lsp.enable('clangd')
+lua vim.lsp.enable('pyright')
+lua vim.lsp.enable('rust_analyzer')
+
+lua require("lsp_config")
+
 set number relativenumber
 set cursorline
 set splitbelow
@@ -15,11 +24,6 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /[\r]\|\s\+$/
 
 colorscheme catppuccin
-
-lua require("plugins")
-lua require("clipboard")
-
-" autocmd FileType c,cpp,objc,objcpp autocmd BufWritePost <buffer> LspRestart
 
 let mapleader = "\<space>"
 imap <C-H> <C-W>
@@ -55,7 +59,7 @@ nnoremap <leader>g <cmd>RG<cr>
 nnoremap <leader>G <cmd>Rg<cr>
 nnoremap <leader>r <cmd>Buffers<cr>
 nnoremap <leader>? <cmd>Helptags<cr>
-nnoremap <leader>q <cmd>ClangdSwitchSourceHeader<cr>
+nnoremap <leader>q <cmd>LspClangdSwitchSourceHeader<cr>
 nnoremap <leader>* <cmd>execute 'Rg '. expand('<cword>')<cr>
 nnoremap <leader>c <cmd>Copilot enable<cr><cmd>Copilot attach<cr><cmd>Copilot status<cr>
 nnoremap <leader>C <cmd>Copilot disable<cr><cmd>Copilot status<cr>
