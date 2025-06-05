@@ -11,8 +11,8 @@ source $ZSH/oh-my-zsh.sh
 
 HISTIGNORE='reboot'
 unsetopt share_history
-export EDITOR=nvim
-export SUDO_EDITOR="nvim"
+export EDITOR=$(which nvim)
+export SUDO_EDITOR=$(which nvim)
 
 # Paths
 export PATH=${PATH}:${HOME}/.local/bin:${HOME}/.cargo/bin
