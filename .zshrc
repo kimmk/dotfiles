@@ -10,6 +10,9 @@ plugins=(git zsh-syntax-highlighting history-substring-search ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 HISTIGNORE='reboot'
+HISTSIZE=100000
+SAVEHIST=100000
+
 unsetopt share_history
 export EDITOR=$(which nvim)
 export SUDO_EDITOR=$(which nvim)
