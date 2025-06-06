@@ -1,5 +1,5 @@
 #!/bin/bash
 case $BLOCK_BUTTON in
-  1) ncal -hbM | sed "s/[ \n]$(date +%e)[ \n]/ <u><b>$(date +%e)<\/b><\/u> /g" | rofi -dmenu -p 'Calendar' -markup-rows ;;
-  *) echo "[ $(date '+%d-%m-%Y %H:%M') ] "
+  1) ncal -hbM | sed "s/[ \n]$(date +%e)[ \n]/ <u><b>$(date +%e)<\/b><\/u> /g" | rofi -dmenu -p 'Calendar' -markup-rows > /dev/null ;;
 esac
+echo "[ $(date '+%d-%m-%Y %H:%M') ] "

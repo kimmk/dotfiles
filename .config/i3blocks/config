@@ -42,7 +42,7 @@ interval=5
 command=~/.config/i3blocks/bat
 interval=30
 
-[time]
+[time_utc_0]
 command=~/.config/i3blocks/utc
 interval=1
 
