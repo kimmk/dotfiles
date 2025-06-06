@@ -1,6 +1,6 @@
 #!/bin/bash
 bat_info=$(acpi -b)
-echo $bat_info | grep -q "Battery" || exit 0
+echo "$bat_info" | grep -q "Battery" || exit 0
 [[ $(acpi -a | cut -d ' ' -f3) == "on-line" ]] && printf '[ AC' || printf '[ BAT'
-echo $bat_info | awk '!/Discharging, 0%/' | awk -F',' 'NR==1 {printf " %02d ]\n", $2}'
+echo "$bat_info" | awk '!/Discharging, 0%/' | awk -F',' 'NR==1 {printf " %02d ]\n", $2}'
 
