@@ -198,10 +198,6 @@ for_window [window_type="menu"] floating enable
 for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
 for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable
 
-# float gitk windows
-for_window [class="gitk"] floating enable
-for_window [class="Gitk"] floating enable
-
 # run X specific settings
 exec sh ~/.config/xsettings
 
