@@ -37,7 +37,4 @@ return {
 {
   "airblade/vim-gitgutter",
 },
-{
-  "puremourning/vimspector",
-},
 }
