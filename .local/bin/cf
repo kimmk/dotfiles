@@ -1,18 +1,18 @@
 #!/bin/bash
 
 editor=$(which nvim)
-declare -A cf
-cf["cf"]=$0
-cf["nvim"]="${HOME}/.config/nvim/init.vim"
-cf["nvim-plugins"]="${HOME}/.config/nvim/lua/plugins.lua"
-cf["tmux"]="${HOME}/.tmux.conf"
-cf["i3"]="${HOME}/.config/i3/config"
-cf["i3blocks"]="${HOME}/.config/i3blocks/config"
-cf["xres"]="${HOME}/.Xresources"
-cf["nvim_plugins"]="${HOME}/.config/nvim/lua/plugins.lua"
-cf["ranger"]="${HOME}/.config/ranger/rc.conf"
-cf["alacritty"]="${HOME}/.config/alacritty/alacritty.toml"
-cf["zsh"]="${HOME}/.zshrc"
+declare -A cf=(
+["cf"]=$0
+["nvim"]="${HOME}/.config/nvim/init.vim"
+["nvim-plugins"]="${HOME}/.config/nvim/lua/plugins"
+["tmux"]="${HOME}/.tmux.conf"
+["i3"]="${HOME}/.config/i3/config"
+["i3blocks"]="${HOME}/.config/i3blocks/config"
+["xres"]="${HOME}/.Xresources"
+["ranger"]="${HOME}/.config/ranger/rc.conf"
+["alacritty"]="${HOME}/.config/alacritty/alacritty.toml"
+["zsh"]="${HOME}/.zshrc"
+)
 
 scf=$1
 
@@ -21,7 +21,10 @@ if [[ -v cf[$scf] ]]; then
     ${editor} ${cfg}
     echo "edited config file '${cfg}'"
 else
-    echo "error: config file for '${scf}' not found."
+    if [[ -n "$scf" ]]; then
+        echo "error: config file for '${scf}' not found."
+    fi
+    echo "available config files:"
+    echo "${!cf[*]}"
     exit 1
 fi
-
