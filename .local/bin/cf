@@ -12,6 +12,9 @@ declare -A cf=(
 ["ranger"]="${HOME}/.config/ranger/rc.conf"
 ["alacritty"]="${HOME}/.config/alacritty/alacritty.toml"
 ["zsh"]="${HOME}/.zshrc"
+["dunst"]="${HOME}/.config/dunst/dunstrc"
+["mpd"]="${HOME}/.config/mpd/mpd.conf"
+["rmpc"]="${HOME}/.config/rmpc/config.ron"
 )
 
 scf=$1
