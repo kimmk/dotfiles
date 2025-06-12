@@ -6,6 +6,7 @@ lua vim.lsp.enable('pyright')
 lua vim.lsp.enable('rust_analyzer')
 
 lua require("lsp_config")
+lua vim.diagnostic.config({ virtual_text = true, virtual_lines = false })
 
 set number relativenumber
 set cursorline
