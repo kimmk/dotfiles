@@ -13,6 +13,7 @@ return {
   event = "InsertEnter",
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/vim-vsnip",
     "zbirenbaum/copilot-cmp",
   },
   opts = function()
