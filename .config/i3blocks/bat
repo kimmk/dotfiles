@@ -1,6 +1,17 @@
 #!/bin/bash
+note_bat_low="/tmp/note_bat_low"
 bat_info=$(acpi -b)
+case $BLOCK_BUTTON in
+  1) acpi -bita | rofi -dmenu -markup-rows -p 'Power adapter and battery information' > /dev/null ;;
+esac
 echo "$bat_info" | grep -q "Battery" || exit 0
 [[ $(acpi -a | cut -d ' ' -f3) == "on-line" ]] && printf '[ AC' || printf '[ BAT'
-echo "$bat_info" | awk '!/Discharging, 0%/' | awk -F',' 'NR==1 {printf " %02d ]\n", $2}'
-
+bat_level=$(echo "$bat_info" | awk '!/Discharging, 0%/' | awk -F',' 'NR==1 {printf "%02d", $2}')
+if [[ $bat_level -lt 11 && ! -f $note_bat_low ]]; then
+    touch $note_bat_low
+    notify-send "Battery at ${bat_level}%"
+fi
+if [[ $bat_level -gt 15 && -f $note_bat_low ]]; then
+    rm $note_bat_low
+fi
+printf " %s ]\n" "$bat_level"
